@@ -18,7 +18,7 @@ class SearchServiceImpl implements SearchService {
       final res = await dio.get(
         'https://api.api-ninjas.com/v1/city?name=$cityName',
         options: Options(
-            headers: {'X-Api-Key': 'pDPnyGuDtO5pYhGaiLc+Ig==PbB0suB0E0xJ1MZE'}),
+            headers: {'X-Api-Key': 'ADD YOUR API KEY'}),
       );
       print(res);
       return CityModel.fromJson(res.data[0]);

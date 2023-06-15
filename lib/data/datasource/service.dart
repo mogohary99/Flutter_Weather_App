@@ -22,6 +22,7 @@ class ServiceImpl implements Service {
     try{
       final response = await dio
           .get('/forecast?q=$cityName&appid=${AppStrings.apiKey}');
+      print(response);
       return WeatherModel.fromJson(response.data);
     }on DioError catch (error) {
       print(error.type);
